@@ -1,0 +1,99 @@
+---
+title: "[분석절차] Multiple Regression 분석 절차 및 코드"
+description: |
+  A short description of the post.
+author:
+  - name: Chungil Chae
+date: 12-16-2019
+preview: "preview.png"
+categories:
+  - Regression
+  - Multiple Regression
+  - Code
+bibliography: reference.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: yes
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- 주석 내용 -->
+# System Setting
+## Packages Loading
+```{r}
+Packages = c(
+  'readxl', # 데이터 로딩
+  'tidyverse', # 데이터 정리
+  'psych', # 계량심리학 관련 펑션
+  'textreg', # 리그레션 테이블
+  'dataMaid', # 코드북
+  'extrafont', # 폰트
+  'DiagrammeR' # 다이어 그램
+)
+
+for(p in Packages){
+  if(!require(p,character.only = TRUE)) install.packages(p)
+  library(p,character.only = TRUE)
+}
+```
+
+## Language and Font
+```{r}
+Sys.setlocale("LC_CTYPE", "ko_KR.UTF-8")
+theme_set(theme_bw(base_family='NanumGothic'))
+par(family='NanumGothic')
+```
+
+
+## Seed Setting
+```{r}
+set.seed(12345)
+```
+
+
+
+
+<!-- 주석 내용 -->
+# Description
+Blah blah [see @fox2018r, pp. 33-35]. 
+
+<aside> This content will appear in the gutter of the article. </aside>
+
+[^thanks]: These people gave me money
+
+## Workflow
+```{r}
+grViz("digraph D {
+  '데이터 준비' -> '데이터 정리'
+  '데이터 정리' -> '분석'
+  '분석' -> '시각화'
+}
+")
+```
+
+
+<!-- 주석 내용 -->
+# Analysis
+## Data Preparation
+### Data Loading
+data <- read_excel("data/data.xlsx")
+### Data Cleaning
+### Data Modification
+### Codebook
+
+<!-- 주석 내용 -->
+# System Information
+```{r}
+Sys.info()
+sessionInfo()
+Packages
+Sys.time()
+```
+
+
+## Acknowledgement {.appendix}
+이 문서를 작성하는데 도움을 주신 ~~ 에게 감사합니다.

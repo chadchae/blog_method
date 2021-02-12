@@ -1,0 +1,67 @@
+---
+title: "[HRD분석] 교육요구도 조사 Borich and Locus for Focus"
+description: |
+  내용
+author:
+  - name: Chad
+    url: https://github.com/chadchae
+    affiliation: ChadLab
+    affiliation_url: https://chadchae.github.io
+date: 12-21-2019
+preview: preview.png
+categories:
+  - HRD	
+  - 분석	
+  - 교육요구도	
+  - Borich	
+  - Locus for Focus
+bibliography: reference.bib
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+draft: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# 이론
+## 교육요구도 분석이란?
+
+
+## 교육요구도 분석의 목적
+
+
+## 교육요구도 분석방법들
+### IPA
+
+### Borich
+
+
+### Locus for Focus
+
+
+
+
+# 실무
+## 실행프로시져
+
+
+## 케이스
+
+
+## 분석
+### 분석 프로시져
+
+### 데이터
+
+
+### 분석
+#### 1
+##### 2
+###### 3
+
+

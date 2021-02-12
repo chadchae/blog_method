@@ -1,0 +1,48 @@
+[
+  {
+    "path": "posts/2019-12-12-20191212borichandlocusforfocus/",
+    "title": "[HRD분석] 교육요구도 조사 Borich and Locus for Focus",
+    "description": "내용",
+    "author": [
+      {
+        "name": "Chad",
+        "url": "https://github.com/chadchae"
+      }
+    ],
+    "date": "2019-12-21",
+    "categories": [
+      "HRD",
+      "분석",
+      "교육요구도",
+      "Borich",
+      "Locus for Focus"
+    ],
+    "contents": "\nTable of Contents\n이론교육요구도 분석이란?\n교육요구도 분석의 목적\n교육요구도 분석방법들IPA\nBorich\nLocus for Focus\n\n\n실무실행프로시져\n케이스\n분석분석 프로시져\n데이터\n분석\n\n\n이론\n교육요구도 분석이란?\n교육요구도 분석의 목적\n교육요구도 분석방법들\nIPA\nBorich\nLocus for Focus\n실무\n실행프로시져\n케이스\n분석\n분석 프로시져\n데이터\n분석\n1\n2\n3\n\n\n",
+    "preview": {},
+    "last_modified": "2021-02-11T23:26:06-03:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2019-12-16-regression/",
+    "title": "[분석절차] Multiple Regression 분석 절차 및 코드",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Chungil Chae",
+        "url": {}
+      }
+    ],
+    "date": "2019-12-16",
+    "categories": [
+      "Regression",
+      "Multiple Regression",
+      "Code"
+    ],
+    "contents": "\nTable of Contents\nSystem SettingPackages Loading\nLanguage and Font\nSeed Setting\n\nDescriptionWorkflow\n\nAnalysisData PreparationData Loading\n\n\nSystem InformationAcknowledgement\n\n\n\n\n\nSystem Setting\nPackages Loading\n\n\nPackages = c(\n  'readxl', # 데이터 로딩\n  'tidyverse', # 데이터 정리\n  'psych', # 계량심리학 관련 펑션\n  'textreg', # 리그레션 테이블\n  'dataMaid', # 코드북\n  'extrafont', # 폰트\n  'DiagrammeR' # 다이어 그램\n)\n\nfor(p in Packages){\n  if(!require(p,character.only = TRUE)) install.packages(p)\n  library(p,character.only = TRUE)\n}\n\nLanguage and Font\n\n\nSys.setlocale(\"LC_CTYPE\", \"ko_KR.UTF-8\")\n\n[1] \"ko_KR.UTF-8\"\n\ntheme_set(theme_bw(base_family='NanumGothic'))\npar(family='NanumGothic')\n\nSeed Setting\n\n\nset.seed(12345)\n\n\nDescription\nBlah blah (see Fox and Weisberg 2018, 33–35).\n\nThis content will appear in the gutter of the article.\nWorkflow\n\n\ngrViz(\"digraph D {\n  '데이터 준비' -> '데이터 정리'\n  '데이터 정리' -> '분석'\n  '분석' -> '시각화'\n}\n\")\n\n{\"x\":{\"diagram\":\"digraph D {\\n  \\\"데이터 준비\\\" -> \\\"데이터 정리\\\"\\n  \\\"데이터 정리\\\" -> \\\"분석\\\"\\n  \\\"분석\\\" -> \\\"시각화\\\"\\n}\\n\",\"config\":{\"engine\":\"dot\",\"options\":null}},\"evals\":[],\"jsHooks\":[]}\n\nAnalysis\nData Preparation\nData Loading\ndata <- read_excel(“data/data.xlsx”) ### Data Cleaning ### Data Modification ### Codebook\n\nSystem Information\n\n\nSys.info()\n\n                                                                                            sysname \n                                                                                           \"Darwin\" \n                                                                                            release \n                                                                                           \"19.4.0\" \n                                                                                            version \n\"Darwin Kernel Version 19.4.0: Wed Mar  4 22:28:40 PST 2020; root:xnu-6153.101.6~15/RELEASE_X86_64\" \n                                                                                           nodename \n                                                                                          \"chadlab\" \n                                                                                            machine \n                                                                                           \"x86_64\" \n                                                                                              login \n                                                                                             \"root\" \n                                                                                               user \n                                                                                         \"chadchae\" \n                                                                                     effective_user \n                                                                                         \"chadchae\" \n\nsessionInfo()\n\nR version 3.6.3 (2020-02-29)\nPlatform: x86_64-apple-darwin15.6.0 (64-bit)\nRunning under: macOS Catalina 10.15.4\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib\nLAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib\n\nlocale:\n[1] en_US.UTF-8/ko_KR.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods  \n[7] base     \n\nother attached packages:\n [1] DiagrammeR_1.0.5 extrafont_0.17   dataMaid_1.4.0  \n [4] textreg_0.1.5    psych_1.9.12.31  forcats_0.5.0   \n [7] stringr_1.4.0    dplyr_0.8.5      purrr_0.3.3     \n[10] readr_1.3.1      tidyr_1.0.2      tibble_3.0.0    \n[13] ggplot2_3.3.0    tidyverse_1.3.0  readxl_1.3.1    \n\nloaded via a namespace (and not attached):\n [1] httr_1.4.1         jsonlite_1.6.1     modelr_0.1.6      \n [4] assertthat_0.2.1   pander_0.6.3       cellranger_1.1.0  \n [7] yaml_2.2.1         robustbase_0.93-6  slam_0.1-47       \n[10] Rttf2pt1_1.3.8     pillar_1.4.3       backports_1.1.6   \n[13] lattice_0.20-41    glue_1.4.0         extrafontdb_1.0   \n[16] digest_0.6.25      radix_0.6          RColorBrewer_1.1-2\n[19] rvest_0.3.5        colorspace_1.4-1   htmltools_0.4.0   \n[22] tm_0.7-7           pkgconfig_2.0.3    broom_0.5.5       \n[25] haven_2.2.0        scales_1.1.0       generics_0.0.2    \n[28] ellipsis_0.3.0     withr_2.1.2        NLP_0.2-0         \n[31] cli_2.0.2          mnormt_1.5-6       magrittr_1.5      \n[34] crayon_1.3.4       evaluate_0.14      fs_1.4.1          \n[37] fansi_0.4.1        nlme_3.1-145       xml2_1.3.1.9000   \n[40] tools_3.6.3        hms_0.5.3          lifecycle_0.2.0   \n[43] munsell_0.5.0      reprex_0.3.0       compiler_3.6.3    \n[46] rlang_0.4.5        grid_3.6.3         rstudioapi_0.11   \n[49] visNetwork_2.0.9   htmlwidgets_1.5.1  rmarkdown_2.1     \n[52] gtable_0.3.0       DBI_1.1.0          R6_2.4.1          \n[55] gridExtra_2.3      lubridate_1.7.8    knitr_1.28        \n[58] stringi_1.4.6      parallel_3.6.3     Rcpp_1.0.4.6      \n[61] vctrs_0.2.4        DEoptimR_1.0-8     dbplyr_1.4.2      \n[64] tidyselect_1.0.0   xfun_0.12         \n\nPackages\n\n[1] \"readxl\"     \"tidyverse\"  \"psych\"      \"textreg\"    \"dataMaid\"  \n[6] \"extrafont\"  \"DiagrammeR\"\n\nSys.time()\n\n[1] \"2020-04-12 12:06:10 KST\"\n\nAcknowledgement\n이 문서를 작성하는데 도움을 주신 ~~ 에게 감사합니다.\n\n\nFox, John, and Sanford Weisberg. 2018. An R Companion to Applied Regression. Sage publications.\n\n\n\n\n",
+    "preview": "posts/2019-12-16-regression/preview.png",
+    "last_modified": "2021-02-11T23:26:06-03:00",
+    "input_file": {},
+    "preview_width": 1200,
+    "preview_height": 794
+  }
+]
